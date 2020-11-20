@@ -9,3 +9,6 @@ for i in youtube.streams:
         continue
     else:
         print(i.resolution)
+quality = input("\nPlease choose a quality: ")
+video = youtube.streams.get_by_resolution(str(quality))
+video.download()
